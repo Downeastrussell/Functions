@@ -97,6 +97,56 @@ var partyGuests = [
 
   ageChecker(partyGuests);
 
+  //6
+  var dwayneObject = {
+    firstName: "Dwayne",
+    nickName: "The Rock",
+    lastName: "Johnson",
+    favoriteFood: "Eggs",
+    hobbies: ["jumping out of planes", "personally holding the  San Andreas fault together", "building muscle mass"]
+  }
+  var list = "";
+  function printHobbies(){
+    
+    for(i=0; i< dwayneObject.hobbies.length; i++){
+        list = list + ` ${dwayneObject.hobbies[i]}`;
+    }
+    console.log(list);
+  }
+  printHobbies(list);
+
+  //7
+  var cohort1 = {
+    name: "Cohort One",
+    startDate: "January 15, 2018",
+    endDate: "July 12, 2018",
+    instructors: ["Jordan", "Josh", "Kim"],
+    techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+  }
+  
+  function printCohort(cohortObject){
+    var htmlString = `
+    
+    <h1 class="name">${cohort1.name}</h1>
+    <h3 class="start">Start date: ${cohort1.startDate}</h3>
+    <h3 class="end">Ending date: ${cohort1.endDate}</h3>
+    <ul class="instructors">
+        <li>${cohort1.instructors[0]}</li>
+        <li>${cohort1.instructors[1]}</li>
+        <li>${cohort1.instructors[2]}</li>
+    </ul>
+    <ul class="tech">
+        <li>${cohort1.techStack[0]}</li>
+        <li>${cohort1.techStack[1]}</li>
+        <li>${cohort1.techStack[2]}</li>
+    </ul>
+    
+    
+    `                  
+    document.querySelector("#cohort-container").innerHTML = htmlString;
+  }
+  printCohort(cohort1);
+
 
 
 
